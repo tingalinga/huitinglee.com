@@ -8,7 +8,6 @@ export default class Homepage extends React.Component {
       <div className="page">
         <h1>homepage</h1>
         <p>Changed page :)</p>
-        <p>Changed second time!</p>
         <a
           className="App-link"
           href="https://reactjs.org"
