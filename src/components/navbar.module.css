@@ -1,0 +1,12 @@
+.navbar {
+  position: absolute;
+  background: transparent;
+  display: flex;
+  width: 100%;
+}
+
+.link {
+  color: darkcyan;
+  text-decoration: none;
+  margin: 10px;
+}

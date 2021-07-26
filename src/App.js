@@ -1,14 +1,14 @@
-import "./App.css";
 import React from "react";
 import { HashRouter, Route, Switch } from "react-router-dom";
-import NavBar from "./components/NavBar";
-import About from "./pages/About";
-import Homepage from "./pages/Homepage";
+
+import NavBar from "components/navbar";
+import About from "pages/about";
+import Homepage from "pages/homepage";
 
 class App extends React.Component {
   render() {
     return (
-      <div className="App">
+      <div>
         <HashRouter hashType="noslash">
           <NavBar />
 
