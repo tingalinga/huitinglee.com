@@ -1,9 +1,17 @@
 .page {
-  background-color: #e8e8e4;
-  min-height: 100vh;
+  background-color: #dcf2ea;
+  color: #142966;
+  overflow: scroll;
+}
+
+.center {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: #1d3557;
+}
+
+.page_block {
+  min-height: calc(100vh - 10vw);
+  padding: 5vw 12vw;
 }

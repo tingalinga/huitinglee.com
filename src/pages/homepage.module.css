@@ -1,0 +1,27 @@
+.plarfair_title {
+  font-family: "Playfair Display", serif;
+  font-size: 100px;
+  font-weight: 900;
+  font-style: italic;
+  margin-block-start: 0px;
+  margin-block-end: 0.33em;
+}
+
+.link {
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #008075;
+}
+
+.link:active {
+  color: #00998c;
+}
+
+.introduction span {
+  font-size: 30px;
+  font-weight: 500;
+  margin-block-start: 0px;
+  margin-block-end: 1em;
+  color: #1d3557;
+}

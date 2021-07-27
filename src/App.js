@@ -1,7 +1,7 @@
 import React from "react";
 import { HashRouter, Route, Switch } from "react-router-dom";
 
-import NavBar from "components/navbar";
+// import NavBar from "components/navbar";
 import About from "pages/about";
 import Homepage from "pages/homepage";
 
@@ -10,7 +10,7 @@ class App extends React.Component {
     return (
       <div>
         <HashRouter hashType="noslash">
-          <NavBar />
+          {/* <NavBar /> */}
 
           <Switch>
             <Route path="/about" component={About} />
