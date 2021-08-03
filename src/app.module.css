@@ -1,6 +1,7 @@
 .page {
-  background-color: #dcf2ea;
-  color: #142966;
+  position: relative;
+  background-color: #f7f2ee;
+  color: #00171f;
   overflow: scroll;
 }
 
@@ -12,6 +13,30 @@
 }
 
 .page_block {
-  min-height: calc(100vh - 10vw);
-  padding: 5vw 12vw;
+  min-height: 90vh;
+  padding: 5vh 16vw;
+}
+
+h1 {
+  font-size: 8rem;
+  margin-block-start: 0.33em;
+  margin-block-end: 0.33em;
+  font-family: zooja-pro;
+  color: #9d4345;
+}
+
+h2 {
+  font-size: 6rem;
+  margin-block-start: 0.33em;
+  margin-block-end: 0.33em;
+  font-family: zooja-pro;
+  color: #9d4345;
+}
+
+p {
+  font-size: 1.75em;
+  font-weight: 500;
+  padding-right: 8vw;
+  margin-block-start: 0px;
+  margin-block-end: 1em;
 }
