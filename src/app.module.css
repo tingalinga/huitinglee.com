@@ -1,42 +1,84 @@
-.page {
-  position: relative;
-  background-color: #f7f2ee;
-  color: #00171f;
-  overflow: scroll;
-}
-
-.center {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.page_block {
-  min-height: 90vh;
-  padding: 5vh 16vw;
-}
-
 h1 {
   font-size: 8rem;
+  font-weight: 400;
   margin-block-start: 0.33em;
   margin-block-end: 0.33em;
-  font-family: zooja-pro;
+  font-family: "zooja-pro";
   color: #9d4345;
 }
 
 h2 {
   font-size: 6rem;
+  font-weight: 400;
   margin-block-start: 0.33em;
   margin-block-end: 0.33em;
-  font-family: zooja-pro;
+  font-family: "zooja-pro";
   color: #9d4345;
 }
 
 p {
-  font-size: 1.75em;
+  font-size: 1.5em;
   font-weight: 500;
   padding-right: 8vw;
   margin-block-start: 0px;
   margin-block-end: 1em;
+}
+
+.page {
+  position: relative;
+  background-color: #f7f2ee;
+  color: #00171f;
+  min-height: 100vh;
+  overflow: auto;
+}
+
+.top_page_block {
+  padding: 24vh 16vw;
+  position: relative;
+}
+
+.page_block {
+  min-height: 90vh;
+  padding: 5vh 16vw;
+  outline: none;
+}
+
+.chevron_up_button {
+  position: fixed;
+  z-index: 100;
+  height: 64px;
+  bottom: 24px;
+  right: 30px;
+  cursor: pointer;
+}
+
+.bounce:hover {
+  animation-name: bounce;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(1, 1) translateY(0);
+  }
+  10% {
+    transform: scale(1.1, 0.9) translateY(0);
+  }
+  30% {
+    transform: scale(0.9, 1.1) translateY(-7px);
+  }
+  50% {
+    transform: scale(1, 1) translateY(0);
+  }
+  57% {
+    transform: scale(1, 1) translateY(-3px);
+  }
+  64% {
+    transform: scale(1, 1) translateY(0);
+  }
+  100% {
+    transform: scale(1, 1) translateY(0);
+  }
 }

@@ -1,5 +1,7 @@
 import React from "react";
 
+import { scroll } from "utils/smoothscroll";
+
 import app from "app.module.css";
 import homepage from "./homepage.module.css";
 
@@ -43,24 +45,17 @@ export default class Homepage extends React.Component {
     }
 
     return (
-      <div id="homepage" className={app.page}>
-        <div className={homepage.page_block}>
-          {this.renderInfoButtons()}
-          <div className={homepage.introduction}>
-            <p>Hey there!</p>
-            <p>
-              I am an aspiring developer and enjoy designing innovative
-              products.
-            </p>
-            <p>
-              I love games, especially pixel RPG games! It is my dream to build
-              my own game in the future :)
-            </p>
-            <img
-              className={homepage.chevron_down_bounce}
-              src="https://img.icons8.com/ios-glyphs/50/9d4345/double-down--v2.png"
-            />
-          </div>
+      <div id="homepage" className={app.top_page_block}>
+        {this.renderInfoButtons()}
+        <div className={homepage.introduction}>
+          <p>Hey there!</p>
+          <p>
+            I am an aspiring developer and enjoy designing innovative products.
+          </p>
+          <p>
+            I love games, especially pixel RPG games! It is my dream to build my
+            own game in the future :)
+          </p>
         </div>
       </div>
     );

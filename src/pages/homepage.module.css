@@ -1,15 +1,10 @@
-.page_block {
-  padding: 24vh 16vw;
-  position: relative;
-}
-
 .heading_section {
   display: flex;
 }
 
 .heading {
   font-size: 13rem;
-  font-family: zooja-pro;
+  font-family: "zooja-pro";
   color: #9d4345;
 }
 
@@ -25,39 +20,4 @@
 
 .introduction {
   margin-top: -50px;
-}
-
-.chevron_down_bounce {
-  position: absolute;
-  left: calc(50% - 25px);
-  bottom: 50px;
-
-  animation-name: chevron_down_bounce;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease;
-}
-
-@keyframes chevron_down_bounce {
-  0% {
-    transform: scale(1, 1) translateY(0);
-  }
-  10% {
-    transform: scale(1.1, 0.9) translateY(0);
-  }
-  30% {
-    transform: scale(0.9, 1.1) translateY(-10px);
-  }
-  50% {
-    transform: scale(1, 1) translateY(0);
-  }
-  57% {
-    transform: scale(1, 1) translateY(-5px);
-  }
-  64% {
-    transform: scale(1, 1) translateY(0);
-  }
-  100% {
-    transform: scale(1, 1) translateY(0);
-  }
 }

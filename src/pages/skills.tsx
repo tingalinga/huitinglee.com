@@ -8,8 +8,8 @@ import skills from "./skills.module.css";
 export default class Homepage extends React.Component {
   render(): JSX.Element {
     return (
-      <div className={app.page_block}>
-        <h1>Skills</h1>
+      <div id="skills" className={app.page_block}>
+        <h2>Skills</h2>
         <div className={homepage.introduction}>
           <p>
             <span>I am a </span>
