@@ -1,7 +1,5 @@
 import React from "react";
 
-import { scroll } from "utils/smoothscroll";
-
 import app from "app.module.css";
 import homepage from "./homepage.module.css";
 
@@ -38,12 +36,6 @@ export default class Homepage extends React.Component {
   );
 
   render(): JSX.Element {
-    console.log("session", localStorage.getItem("session"));
-    if (!localStorage.getItem("session")) {
-      localStorage.setItem("session", "visited");
-      console.log(localStorage.getItem("session"));
-    }
-
     return (
       <div id="homepage" className={app.top_page_block}>
         {this.renderInfoButtons()}

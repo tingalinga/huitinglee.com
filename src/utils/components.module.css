@@ -1,0 +1,86 @@
+/* Chevron Up Button {utils/icon.tsx} */
+.icon {
+  position: relative;
+  height: 85px;
+  width: 60px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.icon_image {
+  position: absolute;
+  z-index: 1;
+  margin-top: 6px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.icon_box {
+  position: absolute;
+  height: 60px;
+  width: 60px;
+  border-radius: 20px;
+  background: #f7f2ee;
+  box-shadow: 6px 6px 7px #dedad6, -6px -6px 7px #ffffff;
+}
+
+.icon_name {
+  transition: color 0.3s;
+  color: transparent;
+  font-size: 0.85rem;
+  font-weight: 500;
+  align-self: flex-end;
+  white-space: nowrap;
+  padding-bottom: 2px;
+  z-index: 2;
+}
+
+.icon:hover .icon_name {
+  color: #9d4345;
+}
+
+/* 
+* Chevron Up Button 
+* for scrolling to the top of page {components/upbutton.tsx} 
+*/
+.chevron_up_button {
+  position: fixed;
+  z-index: 100;
+  height: 64px;
+  bottom: 24px;
+  right: 30px;
+  cursor: pointer;
+}
+
+.bounce:hover {
+  animation-name: bounce-animation;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+}
+
+@keyframes bounce-animation {
+  0% {
+    transform: scale(1, 1) translateY(0);
+  }
+  10% {
+    transform: scale(1.1, 0.9) translateY(0);
+  }
+  30% {
+    transform: scale(0.9, 1.1) translateY(-7px);
+  }
+  50% {
+    transform: scale(1, 1) translateY(0);
+  }
+  57% {
+    transform: scale(1, 1) translateY(-3px);
+  }
+  64% {
+    transform: scale(1, 1) translateY(0);
+  }
+  100% {
+    transform: scale(1, 1) translateY(0);
+  }
+}
