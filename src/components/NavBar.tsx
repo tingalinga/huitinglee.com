@@ -13,9 +13,6 @@ class NavBar extends React.Component {
           <img src={totoro} alt="totoro" />
         </Link>
         <div className={navbar.links}>
-          <Link className={navbar.link} to="/">
-            Homepage
-          </Link>
           <Link className={navbar.link} to="/about">
             About
           </Link>

@@ -1,12 +1,7 @@
 import React from "react";
 
-import sketch_logo from "assets/logos/sketch_logo.png";
-import gamemaker_logo from "assets/logos/gamemaker_logo.png";
-import keycloak_logo from "assets/logos/keycloak_logo.png";
-import aseprite_logo from "assets/logos/aseprite_logo.png";
-
 import ZoojaIcon from "utils/zoojaicon";
-import { Logo, LogoProps } from "utils/logo";
+import { Logo, LogoProps, logoPresets } from "utils/logo";
 
 import app from "app.module.css";
 import skills from "./skills.module.css";
@@ -18,112 +13,40 @@ interface SkillList {
   };
 }
 
-const skillList: SkillList = {
+export const skillList: SkillList = {
   technical: {
     confident: [
-      {
-        image: "https://img.icons8.com/color/500/000000/javascript--v1.png",
-        name: "Javascript",
-      },
-      {
-        image: "https://img.icons8.com/color/500/000000/typescript.png",
-        name: "Typescript",
-      },
-      {
-        image:
-          "https://img.icons8.com/color/500/000000/java-coffee-cup-logo--v1.png",
-        name: "Java",
-      },
-      {
-        image: "https://img.icons8.com/color/500/000000/react-native.png",
-        name: "ReactJS",
-        size: 38,
-      },
-      {
-        image: "https://img.icons8.com/color/500/000000/css3.png",
-        name: "CSS",
-      },
+      logoPresets.javascript,
+      logoPresets.typescript,
+      logoPresets.java,
+      logoPresets.react,
+      logoPresets.css,
     ],
     tried: [
-      {
-        image: "https://img.icons8.com/color/500/000000/c-sharp-logo.png",
-        name: "C#",
-      },
-      {
-        image: "https://img.icons8.com/color/500/000000/html-5--v1.png",
-        name: "HTML 5",
-        size: 46,
-      },
-      {
-        image: "https://img.icons8.com/color/500/000000/spring-logo.png",
-        name: "SpringBoot",
-      },
-      {
-        image: keycloak_logo,
-        name: "Keycloak",
-      },
-      {
-        image: "https://img.icons8.com/color/500/000000/dart.png",
-        name: "Dart",
-      },
-      {
-        image: "https://img.icons8.com/color/500/000000/flutter.png",
-        name: "Flutter",
-      },
+      logoPresets.csharp,
+      logoPresets.html,
+      logoPresets.springboot,
+      logoPresets.keycloak,
+      logoPresets.dart,
+      logoPresets.flutter,
     ],
   },
   design: {
     confident: [
-      {
-        image: "https://img.icons8.com/color/500/000000/figma--v1.png",
-        name: "Figma",
-        size: 45,
-      },
-      {
-        image: sketch_logo,
-        name: "Sketch",
-        size: 38,
-      },
-      {
-        image:
-          "https://img.icons8.com/color/500/000000/adobe-illustrator--v1.png",
-        name: "Adobe Illustrator",
-      },
-      {
-        image: "https://img.icons8.com/color/500/000000/adobe-xd--v1.png",
-        name: "Adobe XD",
-      },
+      logoPresets.figma,
+      logoPresets.sketch,
+      logoPresets.illustrator,
+      logoPresets.xd,
     ],
     tried: [
-      {
-        image:
-          "https://img.icons8.com/color/500/000000/adobe-photoshop--v1.png",
-        name: "Adobe Photoshop",
-      },
-      {
-        image: "https://img.icons8.com/color/500/000000/procreate.png",
-        name: "Procreate",
-      },
-      {
-        image: aseprite_logo,
-        name: "Aseprite",
-        size: 42,
-      },
+      logoPresets.photoshop,
+      logoPresets.premierepro,
+      logoPresets.procreate,
+      logoPresets.aseprite,
     ],
   },
   "game development": {
-    confident: [
-      {
-        image: "https://img.icons8.com/ios-filled/500/000000/unity.png",
-        name: "Unity",
-        size: 45,
-      },
-      {
-        image: gamemaker_logo,
-        name: "GameMaker Studio 2",
-        size: 42,
-      },
-    ],
+    confident: [logoPresets.unity, logoPresets.gamemaker],
     tried: [],
   },
 };
@@ -137,14 +60,14 @@ export default class Skills extends React.Component {
         </p>
         <div className={app.container}>
           <div className={skills.skills_display}>
-            <p className={skills.subheader}>I am confident in</p>
+            <p className={skills.subheading}>I am confident in</p>
             {skillList[skill].confident.map((logoProp) => (
               <Logo key={logoProp.name} {...logoProp} />
             ))}
           </div>
           {skillList[skill].tried.length > 0 && (
             <div className={skills.skills_display}>
-              <p className={skills.subheader}>I have dabbled in</p>
+              <p className={skills.subheading}>I have dabbled in</p>
               {skillList[skill].tried.map((logoProp) => (
                 <Logo key={logoProp.name} {...logoProp} />
               ))}
@@ -158,7 +81,7 @@ export default class Skills extends React.Component {
   render(): JSX.Element {
     return (
       <div id="skills" className={app.page_block}>
-        <h2 className={app.heading}>
+        <h2 className={app.heading_box}>
           <ZoojaIcon icon="U" sideIcon /> Skills
         </h2>
         <div>

@@ -11,7 +11,7 @@ export default class Profile extends React.Component {
   render(): JSX.Element {
     return (
       <div id="profile" className={app.page_block}>
-        <h2 className={app.heading}>
+        <h2 className={app.heading_box}>
           <ZoojaIcon icon="r" sideIcon /> Profile
         </h2>
         <div className={app.container}>

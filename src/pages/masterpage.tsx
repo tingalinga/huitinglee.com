@@ -1,8 +1,9 @@
 import React from "react";
 
 import Homepage from "pages/homepage";
-import Skills from "pages/skills";
 import Profile from "pages/profile";
+import Skills from "pages/skills";
+import Experience from "pages/experience";
 
 import app from "app.module.css";
 
@@ -13,6 +14,7 @@ export default class MasterPage extends React.Component {
         <Homepage />
         <Profile />
         <Skills />
+        <Experience />
       </div>
     );
   }
