@@ -1,3 +1,53 @@
+/* Navigation Bar {utils/navbar.tsx} */
+.navbar {
+  position: absolute;
+  background: transparent;
+  display: flex;
+  width: calc(100% - 32vw);
+  padding: 5vh 16vw;
+  z-index: 10;
+}
+
+.links {
+  padding-top: 20px;
+  margin-left: auto;
+}
+
+.link {
+  font-size: 1.25rem;
+  font-weight: 500;
+  text-decoration: none;
+  margin: 0 20px;
+  color: #9d4345;
+
+  display: inline-block;
+  position: relative;
+}
+
+.link:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #9d4345;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.link:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.link:hover,
+.link:active {
+  background-position: 100% 100%;
+  background-size: 100% 2px;
+}
+
 /* Chevron Up Button {utils/icon.tsx} */
 .icon {
   position: relative;

@@ -103,41 +103,40 @@ const experienceList: ExperienceList = {
 export default class Experience extends React.Component {
   renderExperienceDisplay = (company: ExperienceProps) => {
     return (
-      <>
-        <div className={experience.container}>
-          <p className={experience.title}>
-            {company.role}
-            <span className={experience.subheading}> | {company.period}</span>
-          </p>
-          <a
-            className={experience.subheading}
-            href={company.site}
-            target="_blank"
-          >
-            {company.company}
-          </a>
-          <ul>
-            {company.description.map((line) => (
-              <li>{line}</li>
-            ))}
-          </ul>
-          <div className={experience.skills}>
-            {Object.entries(company.skills).map((skill) => {
-              if (skill[1].length <= 0) return null;
-              return (
-                <div key={skill[0]} className={experience.skills_type}>
-                  <p className={experience.subheading}>{skill[0]} stack</p>
-                  <div className={experience.logos}>
-                    {skill[1].map((logoProps) => (
-                      <Logo key={logoProps.name} {...logoProps} />
-                    ))}
-                  </div>
+      <div key={company.company} className={experience.container}>
+        <p className={experience.title}>
+          {company.role}
+          <span className={experience.subheading}> | {company.period}</span>
+        </p>
+        <a
+          className={experience.subheading}
+          href={company.site}
+          target="_blank"
+          rel="noreferrer"
+        >
+          {company.company}
+        </a>
+        <ul>
+          {company.description.map((line) => (
+            <li key={line.substring(0, 10) + "..."}>{line}</li>
+          ))}
+        </ul>
+        <div className={experience.skills}>
+          {Object.entries(company.skills).map((skill) => {
+            if (skill[1].length <= 0) return null;
+            return (
+              <div key={skill[0]} className={experience.skills_type}>
+                <p className={experience.subheading}>{skill[0]} stack</p>
+                <div className={experience.logos}>
+                  {skill[1].map((logoProps) => (
+                    <Logo key={logoProps.name} {...logoProps} />
+                  ))}
                 </div>
-              );
-            })}
-          </div>
+              </div>
+            );
+          })}
         </div>
-      </>
+      </div>
     );
   };
 

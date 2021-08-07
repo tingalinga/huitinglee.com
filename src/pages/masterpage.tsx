@@ -1,9 +1,9 @@
 import React from "react";
 
-import Homepage from "pages/homepage";
-import Profile from "pages/profile";
-import Skills from "pages/skills";
-import Experience from "pages/experience";
+import Homepage from "components/homepage";
+import Profile from "components/profile";
+import Skills from "components/skills";
+import Experience from "components/experience";
 
 import app from "app.module.css";
 

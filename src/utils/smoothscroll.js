@@ -1,4 +1,4 @@
-import homepage from "pages/homepage";
+import homepage from "components/homepage";
 
 export function scroll(element) {
   let start = null;

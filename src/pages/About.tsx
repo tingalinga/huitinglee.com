@@ -1,7 +1,7 @@
 import React from "react";
 
-import Profile from "pages/profile";
-import Skills from "pages/skills";
+import Profile from "components/profile";
+import Skills from "components/skills";
 
 import app from "app.module.css";
 
