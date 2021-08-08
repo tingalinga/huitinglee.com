@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.d7c77216.chunk.css",
-    "main.js": "/static/js/main.a58e26b5.chunk.js",
-    "main.js.map": "/static/js/main.a58e26b5.chunk.js.map",
+    "main.js": "/static/js/main.82b12b0a.chunk.js",
+    "main.js.map": "/static/js/main.82b12b0a.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.6db51ffb.js",
     "runtime-main.js.map": "/static/js/runtime-main.6db51ffb.js.map",
     "static/js/2.482f7965.chunk.js": "/static/js/2.482f7965.chunk.js",
@@ -17,7 +17,7 @@
     "static/media/captsule.8f2cb3b7.png": "/static/media/captsule.8f2cb3b7.png",
     "static/media/cssmodules_logo.d583e88d.png": "/static/media/cssmodules_logo.d583e88d.png",
     "static/media/javafx_logo.152d391d.png": "/static/media/javafx_logo.152d391d.png",
-    "static/media/jazzttitude_stickers.8fc7c077.png": "/static/media/jazzttitude_stickers.8fc7c077.png",
+    "static/media/jazzttitude_stickers.fd54ff49.png": "/static/media/jazzttitude_stickers.fd54ff49.png",
     "static/media/keycloak_logo.e97fca22.png": "/static/media/keycloak_logo.e97fca22.png",
     "static/media/outofthyme.6805df3b.png": "/static/media/outofthyme.6805df3b.png",
     "static/media/rocketpad_demo.4dc84956.mp4": "/static/media/rocketpad_demo.4dc84956.mp4",
@@ -28,6 +28,6 @@
     "static/js/runtime-main.6db51ffb.js",
     "static/js/2.482f7965.chunk.js",
     "static/css/main.d7c77216.chunk.css",
-    "static/js/main.a58e26b5.chunk.js"
+    "static/js/main.82b12b0a.chunk.js"
   ]
 }
