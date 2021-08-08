@@ -12,7 +12,6 @@ export default class MasterPage extends React.Component {
   render(): JSX.Element {
     return (
       <div className={app.page}>
-        <div id="first_page_block" className={app.first_page_block} />
         <Homepage />
         <Profile />
         <Skills />
