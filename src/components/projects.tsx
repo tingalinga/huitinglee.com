@@ -3,138 +3,203 @@ import React from "react";
 import ZoojaIcon from "utils/components/zoojaicon";
 import { Logo, LogoProps, logoPresets } from "utils/components/logo";
 
+import outofthyme_image from "assets/projects/outofthyme.png";
+import captsule_image from "assets/projects/captsule.png";
+import captsule_pdf from "assets/projects/CAPTsule AY19:20.pdf";
+import rocketpad_demo from "assets/projects/rocketpad_demo.mp4";
+import jazzttitude_stickers from "assets/projects/jazzttitude_stickers.png";
+
 import app from "app.module.css";
 import experience from "./experience.module.css";
+import projects from "./projects.module.css";
 
-interface ExperienceProps {
-  company: string;
-  site: string;
+interface ProjectProps {
+  name: string;
+  image: string;
   period: string;
   role: string;
-  description: string[];
+  description?: string[];
+  contributions?: string[];
+  actions?: { name: string; link: string }[];
   skills: { technical: LogoProps[]; design: LogoProps[] };
 }
 
-interface ExperienceList {
-  [company: string]: ExperienceProps;
+interface ProjectList {
+  [project: string]: ProjectProps;
 }
 
-const experienceList: ExperienceList = {
-  govtech: {
-    company: "Government Technology Agency (GovTech)",
-    site: "https://www.tech.gov.sg",
-    period: "Jan 21 - Jul 21",
-    role: "Full Stack Engineer Intern",
-    description: [
-      "In-charge of Full-stack Development of the GALE (GovTech Assisted Living Ecosystem) Onboard Web Application.",
-      "Cleaned and revamped the UI/UX of the onboarding application with ReactJS, HTML and CSS.",
-      "Worked with the ACAS (Advanced Cyber Attack Simulation) department to improve security on the Backend using Java and Spring.",
-      "Migrated backend server from Enos to Keycloak using SpringBoot, Java and Kong.",
-    ],
-    skills: {
-      technical: [
-        logoPresets.react,
-        logoPresets.javascript,
-        logoPresets.springboot,
-        logoPresets.keycloak,
-        logoPresets.kong,
-      ],
-      design: [logoPresets.css],
-    },
-  },
-  datature: {
-    company: "Datature",
-    site: "https://datature.io",
-    period: "June 20 – Dec 20",
-    role: "Frontend Software Engineer Intern",
-    description: [
-      "Built and designed the website with Adobe XD and Wordpress for the Beta product promotion.",
-      "Designed the UI/UX for the beta as well as coded the frontend of the product interface using NextJS, TypeScript and HTML/CSS.",
-      "Conducted User Testing for the Beta Prototype with potential clients/investors.",
-    ],
-    skills: {
-      technical: [
-        logoPresets.react,
-        logoPresets.javascript,
-        logoPresets.typescript,
-        logoPresets.nextjs,
-        logoPresets.auth0,
-        logoPresets.wordpress,
-        logoPresets.github,
-      ],
-      design: [logoPresets.css, logoPresets.xd, logoPresets.premierepro],
-    },
-  },
-  cs2103t: {
-    company: "Nationcal University of Singapore",
-    site: "https://www.nus.edu.sg",
+const projectList: ProjectList = {
+  outofthyme: {
+    name: "Out of Thyme",
+    image: outofthyme_image,
     period: "Aug 20 - Dec 20",
-    role: "CS2103/T Teaching Assistant",
+    role: "Game Programmer",
     description: [
-      "Mentored 2 teams of 5 students throughout their individual and group projects.",
-      "Taught and covered the aforementioned topics of Software Development in weekly tutorial classes.",
-      "Gave feedback to students on their code quality and projects.",
+      "Out of Thyme is a single-player platformer game featuring a player-controlled character and" +
+        "their time-controlling thyme. Interact with the world by throwing the time-controlling thyme at" +
+        "objects to “rewind” their effects/state (e.g throwing thyme at a projectile to reverse its motion).",
+      "This game was created by a team of 4 for the module NM3216 Game Design and got showcased at the NUS" +
+        " Arts Festival.",
+    ],
+    contributions: [
+      "Coded and developed a platform game using GameMaker Studio 2.",
+      "Designed and arranged levels on Miro, as well as recruited playtesters for quality assurance testing.",
+      "Sourced for royalty free art and drew sprites for the game art.",
+    ],
+    actions: [
+      {
+        name: "play on itch.io",
+        link: "https://tingalinga.itch.io/out-of-thyme",
+      },
     ],
     skills: {
-      technical: [logoPresets.java, logoPresets.javafx, logoPresets.github],
-      design: [],
+      technical: [logoPresets.gamemaker],
+      design: [logoPresets.miro, logoPresets.photoshop],
     },
   },
-  aurora: {
-    company: "Aurora Interactive",
-    site: "https://teamaurorasg.wixsite.com/home",
-    period: "Aug 19 – May 20",
-    role: "Freelance Lead Illustrator",
+  rocketpad: {
+    name: "RocketPad",
+    image: rocketpad_demo,
+    period: "Oct 19 - July 20",
+    role: "UI/UX Designer",
     description: [
-      "Collaborated with a team of entrepreneurs and developed a card game project as a designer.",
-      "Conceptualised and designed the 60-card game using Procreate and Adobe Illustrator.",
+      "RocketPad is a prototype which aims to elevate the struggles of budding startups and to improve their" +
+        "chances of success.",
+      "This project was completed in accordance to the CS3240 Interaction Design module.",
+    ],
+    contributions: [
+      "Conducted in-depth reasearch on the problem statement and formulated a solution.",
+      "Built a high fidelity prototype on Figma.",
+    ],
+    actions: [
+      {
+        name: "visit project site",
+        link: "https://itshuitingg6.wixsite.com/rocketpad",
+      },
+      {
+        name: "try out the prototype on figma",
+        link: "https://www.figma.com/proto/5Ivl6GvTRRAIUqL1ZwVYO2/CS3240-Final-Prototype",
+      },
+    ],
+    skills: {
+      technical: [],
+      design: [logoPresets.figma, logoPresets.wix],
+    },
+  },
+  captsule: {
+    name: "CAPTsule",
+    image: captsule_image,
+    period: "Aug 20 - Dec 20",
+    role: "Game Programmer",
+    description: [
+      "CAPTsule is a annual yearbook publication distributed in College of Alice and Peter Tan (CAPT)." +
+        "It encapsulates the respective academic year in CAPT and showcases the residents and events they have experienced.",
+    ],
+    contributions: [
+      "Designed and published the 90-page yearbook using Adobe Illustrator.",
+    ],
+    actions: [
+      {
+        name: "view captsule ay18/19 edition",
+        link: captsule_pdf,
+      },
+    ],
+    skills: {
+      technical: [],
+      design: [logoPresets.illustrator],
+    },
+  },
+  jazzttitude: {
+    name: "Jazzttitude Publicity Merch and Video",
+    image: jazzttitude_stickers,
+    period: "Jan 20 - May 20",
+    role: "Publicity Director",
+    description: [
+      "NUS Jazzttitude was founded in 2006 specializing mainly in the dance genre of Street Jazz.",
+    ],
+    contributions: [
+      "Managed and curated the crew’s social media platform with event posts and publicity videos.",
+      "Started a merchandise shop selling stickers and shirts for the crew to obtain funds.",
+      "Coordinated and planned the publicity video with Premiere Pro.",
+    ],
+    actions: [
+      {
+        name: "view @nus.jazzttitude's instagram",
+        link: "https://www.instagram.com/nus.jazzttitude",
+      },
+      {
+        name: "watch Jazzttitude Publicity Video 2019",
+        link: "https://www.youtube.com/watch?v=ZcHNRy7L_n0",
+      },
     ],
     skills: {
       technical: [],
       design: [
         logoPresets.procreate,
-        logoPresets.illustrator,
         logoPresets.photoshop,
+        logoPresets.illustrator,
+        logoPresets.premierepro,
       ],
     },
   },
 };
 
 export default class Projects extends React.Component {
-  renderExperienceDisplay = (company: ExperienceProps) => {
+  renderProjectsDisplay = (project: ProjectProps) => {
     return (
-      <div key={company.company} className={experience.container}>
-        <p className={experience.title}>
-          {company.role}
-          <span className={experience.subheading}> | {company.period}</span>
-        </p>
-        <a
-          className={experience.subheading}
-          href={company.site}
-          target="_blank"
-          rel="noreferrer"
-        >
-          {company.company}
-        </a>
-        <ul>
-          {company.description.map((line) => (
-            <li key={line.substring(0, 10) + "..."}>{line}</li>
+      <div key={project.name} className={experience.container}>
+        <div className={experience.projects_subcontainer}>
+          <img
+            className={experience.projects_image}
+            alt={project.image}
+            src={project.image}
+          />
+          <p className={experience.title}>
+            {project.name}
+            <span className={experience.subheading}> | {project.period}</span>
+          </p>
+          <p className={experience.subheading}>{project.role}</p>
+          {project.description?.map((line) => (
+            <p
+              key={line.substring(0, 10) + "..."}
+              className={projects.description}
+            >
+              {line}
+            </p>
           ))}
-        </ul>
-        <div className={experience.skills}>
-          {Object.entries(company.skills).map((skill) => {
-            if (skill[1].length <= 0) return null;
-            return (
-              <div key={skill[0]} className={experience.skills_type}>
-                <p className={experience.subheading}>{skill[0]} stack</p>
-                <div className={experience.logos}>
-                  {skill[1].map((logoProps) => (
-                    <Logo key={logoProps.name} {...logoProps} />
-                  ))}
+          <ul className={projects.contributions}>
+            {project.contributions?.map((line) => (
+              <li key={line.substring(0, 10) + "..."}>{line}</li>
+            ))}
+          </ul>
+          {project.actions?.length &&
+            project.actions.map((action) => (
+              <p key={action.name} className={experience.actions}>
+                <a
+                  className={experience.subheading}
+                  href={action.link}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {`< ${action.name} />`}
+                </a>
+              </p>
+            ))}
+          <div className={experience.skills}>
+            {Object.entries(project.skills).map((skill) => {
+              if (skill[1].length <= 0) return null;
+              return (
+                <div key={skill[0]} className={experience.skills_type}>
+                  <p className={experience.subheading}>{skill[0]} stack</p>
+                  <div className={experience.logos}>
+                    {skill[1].map((logoProps) => (
+                      <Logo key={logoProps.name} {...logoProps} />
+                    ))}
+                  </div>
                 </div>
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
       </div>
     );
@@ -147,8 +212,8 @@ export default class Projects extends React.Component {
           <ZoojaIcon icon="e" sideIcon />
           Projects
         </h2>
-        {Object.values(experienceList).map((experience) =>
-          this.renderExperienceDisplay(experience)
+        {Object.values(projectList).map((project) =>
+          this.renderProjectsDisplay(project)
         )}
       </div>
     );

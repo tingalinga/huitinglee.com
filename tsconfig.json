@@ -15,6 +15,7 @@
     "isolatedModules": true,
     "noEmit": true,
     "types": ["react", "react-dom"],
+    "typeRoots": ["./src/global"],
     "jsx": "react-jsx",
     "baseUrl": "./src"
   },

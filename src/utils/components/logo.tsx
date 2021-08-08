@@ -9,6 +9,7 @@ import auth0_logo from "assets/logos/auth0_logo.png";
 import kong_logo from "assets/logos/kong_logo.png";
 import javafx_logo from "assets/logos/javafx_logo.png";
 import cssmodules_logo from "assets/logos/cssmodules_logo.png";
+import miro_logo from "assets/logos/miro_logo.png";
 
 import components from "./components.module.css";
 
@@ -164,5 +165,14 @@ export const logoPresets: { [name: string]: LogoProps } = {
     image: cssmodules_logo,
     name: "CSS Modules",
     size: 43,
+  },
+  miro: {
+    image: miro_logo,
+    name: "Miro",
+    size: 45,
+  },
+  wix: {
+    image: "https://img.icons8.com/windows/32/000000/wix.png",
+    name: "Wix",
   },
 };

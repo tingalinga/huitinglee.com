@@ -1,6 +1,6 @@
 .container {
   width: 100%;
-  padding: 30px;
+  padding: 30px 30px 20px 30px;
   margin-left: -30px;
   margin-bottom: 75px;
   border-radius: 20px;
@@ -13,7 +13,7 @@
   font-weight: 700;
   padding-right: 8vw;
   margin-block-start: 0px;
-  margin-block-end: 0;
+  margin-block-end: 0.25em;
   color: #9d4345;
 }
 
@@ -23,13 +23,25 @@
 }
 
 .subheading {
+  margin-top: 5px;
   font-size: 20px;
   font-weight: 500;
   color: #666666;
 }
 
+.additional_notes {
+  font-size: 20px;
+  font-weight: 500;
+  margin-block-start: 1em;
+  color: #666666;
+}
+
+.description {
+  margin: 25px 0;
+}
+
 a:hover {
-  color: #825556;
+  color: #9d4345;
 }
 
 .skills {
@@ -44,4 +56,24 @@ a:hover {
   display: flex;
   flex-flow: row wrap;
   padding-right: 40px;
+}
+
+p a {
+  text-decoration: none;
+}
+
+p.actions {
+  font-family: ui-monospace;
+  font-size: 1.5em;
+}
+
+.projects_subcontainer {
+  width: 100%;
+}
+
+.projects_image {
+  width: 100%;
+  border-radius: 15px;
+  object-fit: contain;
+  margin-bottom: 20px;
 }

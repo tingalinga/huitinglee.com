@@ -1,8 +1,10 @@
 import React from "react";
 import { HashRouter, Route, Switch } from "react-router-dom";
 
-import About from "pages/about";
 import MasterPage from "pages/masterpage";
+import About from "pages/about";
+import Experience from "pages/experience";
+import Projects from "pages/projects";
 import NavBar from "utils/components/navbar";
 import UpButton from "utils/components/upbutton";
 
@@ -20,6 +22,8 @@ class App extends React.Component {
 
           <Switch>
             <Route path="/about" component={About} />
+            <Route path="/experience" component={Experience} />
+            <Route path="/projects" component={Projects} />
             <Route component={MasterPage} />
           </Switch>
         </HashRouter>

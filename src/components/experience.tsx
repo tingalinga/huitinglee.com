@@ -11,7 +11,9 @@ interface ExperienceProps {
   site: string;
   period: string;
   role: string;
+  additional_notes?: string;
   description: string[];
+  actions?: { name: string; link: string }[];
   skills: { technical: LogoProps[]; design: LogoProps[] };
 }
 
@@ -28,7 +30,8 @@ const experienceList: ExperienceList = {
     description: [
       "In-charge of Full-stack Development of the GALE (GovTech Assisted Living Ecosystem) Onboard Web Application.",
       "Cleaned and revamped the UI/UX of the onboarding application with ReactJS, HTML and CSS.",
-      "Worked with the ACAS (Advanced Cyber Attack Simulation) department to improve security on the Backend using Java and Spring.",
+      "Worked with the ACAS (Advanced Cyber Attack Simulation) department to improve security on the Backend " +
+        "using Java and Spring.",
       "Migrated backend server from Enos to Keycloak using SpringBoot, Java and Kong.",
     ],
     skills: {
@@ -50,9 +53,20 @@ const experienceList: ExperienceList = {
     period: "June 20 – Dec 20",
     role: "Frontend Software Engineer Intern",
     description: [
-      "Built and designed the website with Adobe XD and Wordpress for the Beta product promotion.",
-      "Designed the UI/UX for the beta as well as coded the frontend of the product interface using NextJS, TypeScript and HTML/CSS.",
+      "Designed the UI/UX for the beta product Datature Nexus as well as coded the frontend of the product " +
+        "interface using NextJS, TypeScript and HTML/CSS.",
       "Conducted User Testing for the Beta Prototype with potential clients/investors.",
+      "Built and designed the website with Adobe XD and Wordpress for the Beta product promotion.",
+    ],
+    actions: [
+      {
+        name: "view Datature Nexus product site",
+        link: "https://datature.io",
+      },
+      {
+        name: "view Datature portal site",
+        link: "https://datature.io/portal",
+      },
     ],
     skills: {
       technical: [
@@ -73,6 +87,11 @@ const experienceList: ExperienceList = {
     site: "https://www.nus.edu.sg",
     period: "Aug 20 - Dec 20",
     role: "CS2103/T Teaching Assistant",
+    additional_notes:
+      "CS2103/T is an NUS module that covers four main areas of software development, namely: object-" +
+      "oriented system analysis, object-oriented system modelling and design, implementation, and testing," +
+      " with emphasis on system modelling and design and implementation of software modules that work " +
+      "cooperatively to fulfils the requirements of the system.",
     description: [
       "Mentored 2 teams of 5 students throughout their individual and group projects.",
       "Taught and covered the aforementioned topics of Software Development in weekly tutorial classes.",
@@ -91,6 +110,12 @@ const experienceList: ExperienceList = {
     description: [
       "Collaborated with a team of entrepreneurs and developed a card game project as a designer.",
       "Conceptualised and designed the 60-card game using Procreate and Adobe Illustrator.",
+    ],
+    actions: [
+      {
+        name: "view product site",
+        link: "https://teamaurorasg.wixsite.com/home",
+      },
     ],
     skills: {
       technical: [],
@@ -119,11 +144,28 @@ export default class Experience extends React.Component {
         >
           {company.company}
         </a>
-        <ul>
+        <p className={experience.additional_notes}>
+          {company.additional_notes}
+        </p>
+        <ul className={experience.description}>
           {company.description.map((line) => (
             <li key={line.substring(0, 10) + "..."}>{line}</li>
           ))}
         </ul>
+        {company.actions?.length &&
+          company.actions.map((action) => (
+            <p key={action.name} className={experience.actions}>
+              <a
+                className={experience.subheading}
+                href={action.link}
+                target="_blank"
+                rel="noreferrer"
+              >
+                {`< ${action.name} />`}
+              </a>
+            </p>
+          ))}
+
         <div className={experience.skills}>
           {Object.entries(company.skills).map((skill) => {
             if (skill[1].length <= 0) return null;
