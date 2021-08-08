@@ -38,10 +38,8 @@ const experienceList: ExperienceList = {
         logoPresets.springboot,
         logoPresets.keycloak,
         logoPresets.kong,
-        logoPresets.html,
-        logoPresets.css,
       ],
-      design: [],
+      design: [logoPresets.css],
     },
   },
   datature: {
@@ -56,16 +54,15 @@ const experienceList: ExperienceList = {
     ],
     skills: {
       technical: [
-        logoPresets.nextjs,
-        logoPresets.typescript,
-        logoPresets.cssmodules,
         logoPresets.react,
         logoPresets.javascript,
+        logoPresets.typescript,
+        logoPresets.nextjs,
         logoPresets.auth0,
         logoPresets.wordpress,
         logoPresets.github,
       ],
-      design: [logoPresets.sketch, logoPresets.xd, logoPresets.premierepro],
+      design: [logoPresets.css, logoPresets.xd, logoPresets.premierepro],
     },
   },
   cs2103t: {
@@ -103,7 +100,7 @@ const experienceList: ExperienceList = {
   },
 };
 
-export default class Experience extends React.Component {
+export default class Projects extends React.Component {
   renderExperienceDisplay = (company: ExperienceProps) => {
     return (
       <div key={company.company} className={experience.container}>
@@ -147,8 +144,8 @@ export default class Experience extends React.Component {
     return (
       <div id="skills" className={app.page_block}>
         <h2 className={app.heading_box}>
-          <ZoojaIcon icon="G" sideIcon />
-          Experience
+          <ZoojaIcon icon="e" sideIcon />
+          Projects
         </h2>
         {Object.values(experienceList).map((experience) =>
           this.renderExperienceDisplay(experience)

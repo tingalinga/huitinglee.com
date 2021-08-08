@@ -8,7 +8,7 @@ import components from "./components.module.css";
 class NavBar extends React.Component {
   render() {
     return (
-      <div className={components.navbar}>
+      <div id="navbar" className={components.navbar}>
         <Link to="/">
           <img src={totoro} alt="totoro" />
         </Link>

@@ -11,19 +11,6 @@ class About extends React.Component {
       <div className={app.page}>
         <Profile />
         <Skills />
-        <div className={app.top_page_block}>
-          <h1>about</h1>
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </div>
       </div>
     );
   }

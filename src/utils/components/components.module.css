@@ -1,4 +1,4 @@
-/* Navigation Bar {utils/navbar.tsx} */
+/* Navigation Bar {utils/components/navbar.tsx} */
 .navbar {
   position: absolute;
   background: transparent;
@@ -48,8 +48,8 @@
   background-size: 100% 2px;
 }
 
-/* Chevron Up Button {utils/icon.tsx} */
-.icon {
+/* Logo Icons {utils/components/icon.tsx} */
+.logo {
   position: relative;
   height: 85px;
   width: 60px;
@@ -59,7 +59,7 @@
   justify-content: center;
 }
 
-.icon_image {
+.logo_image {
   position: absolute;
   z-index: 1;
   margin-top: 6px;
@@ -67,7 +67,7 @@
   object-fit: contain;
 }
 
-.icon_box {
+.logo_box {
   position: absolute;
   height: 60px;
   width: 60px;
@@ -76,7 +76,7 @@
   box-shadow: 6px 6px 7px #dedad6, -6px -6px 7px #ffffff;
 }
 
-.icon_name {
+.logo_name {
   transition: color 0.3s;
   color: transparent;
   font-size: 0.85rem;
@@ -87,7 +87,7 @@
   z-index: 2;
 }
 
-.icon:hover .icon_name {
+.logo:hover .logo_name {
   color: #9d4345;
 }
 
@@ -97,6 +97,8 @@
 */
 .chevron_up_button {
   position: fixed;
+  opacity: 0;
+  transition: opacity 0.5s;
   z-index: 100;
   height: 64px;
   bottom: 24px;
@@ -133,4 +135,10 @@
   100% {
     transform: scale(1, 1) translateY(0);
   }
+}
+
+/* SideNav {utils/components/sidenav.tsx} */
+.sidenav {
+  position: fixed;
+  padding: 50% 0;
 }

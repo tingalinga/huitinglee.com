@@ -1,7 +1,7 @@
 import React from "react";
 
-import ZoojaIcon from "utils/zoojaicon";
-import { Logo, LogoProps, logoPresets } from "utils/logo";
+import ZoojaIcon from "utils/components/zoojaicon";
+import { Logo, LogoProps, logoPresets } from "utils/components/logo";
 
 import app from "app.module.css";
 import skills from "./skills.module.css";

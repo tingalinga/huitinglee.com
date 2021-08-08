@@ -63,6 +63,13 @@ p .zooja_elements {
   overflow: auto;
 }
 
+.first_page_block {
+  position: absolute;
+  z-index: 100;
+  background-color: #9d4345;
+  height: 80vh;
+}
+
 .container {
   display: flex;
   align-items: flex-start;

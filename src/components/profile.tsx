@@ -1,6 +1,6 @@
 import React from "react";
 
-import ZoojaIcon from "utils/zoojaicon";
+import ZoojaIcon from "utils/components/zoojaicon";
 
 import totoro_walk from "assets/totoro_walk.gif";
 

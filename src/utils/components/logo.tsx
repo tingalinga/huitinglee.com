@@ -8,6 +8,7 @@ import nextjs_logo from "assets/logos/nextjs_logo.png";
 import auth0_logo from "assets/logos/auth0_logo.png";
 import kong_logo from "assets/logos/kong_logo.png";
 import javafx_logo from "assets/logos/javafx_logo.png";
+import cssmodules_logo from "assets/logos/cssmodules_logo.png";
 
 import components from "./components.module.css";
 
@@ -20,19 +21,19 @@ export interface LogoProps {
 export class Logo extends React.Component<LogoProps, {}> {
   render() {
     const { image, name, size } = this.props;
-    const iconStyle = size
+    const logoStyle = size
       ? { height: `${size}px`, marginTop: `${(60 - size) * 0.5}px` }
       : {};
     return (
-      <div className={components.icon}>
+      <div className={components.logo}>
         <img
           alt={`${name} logo`}
-          className={components.icon_image}
-          style={iconStyle}
+          className={components.logo_image}
+          style={logoStyle}
           src={image}
         />
-        <div className={components.icon_box} />
-        <span className={components.icon_name}>{name}</span>
+        <div className={components.logo_box} />
+        <span className={components.logo_name}>{name}</span>
       </div>
     );
   }
@@ -158,5 +159,10 @@ export const logoPresets: { [name: string]: LogoProps } = {
     image: javafx_logo,
     name: "JavaFX",
     size: 24,
+  },
+  cssmodules: {
+    image: cssmodules_logo,
+    name: "CSS Modules",
+    size: 43,
   },
 };

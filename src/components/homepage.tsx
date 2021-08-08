@@ -41,12 +41,10 @@ export default class Homepage extends React.Component {
         {this.renderInfoButtons()}
         <div className={homepage.introduction}>
           <p>Hey there!</p>
+          <p>I love to code and design.</p>
           <p>
-            I am an aspiring developer and enjoy designing innovative products.
-          </p>
-          <p>
-            I love games, especially pixel RPG games! It is my dream to build my
-            own game in the future :)
+            I also love games, especially pixel RPG games! <br />
+            It is my dream to build my own game in the future :)
           </p>
         </div>
       </div>
