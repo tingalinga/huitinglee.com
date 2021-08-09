@@ -89,7 +89,7 @@ const projectList: ProjectList = {
     name: "CAPTsule",
     image: captsule_image,
     period: "Aug 20 - Dec 20",
-    role: "Game Programmer",
+    role: "Designer",
     description: [
       "CAPTsule is a annual yearbook publication distributed in College of Alice and Peter Tan (CAPT)." +
         "It encapsulates the respective academic year in CAPT and showcases the residents and events they have experienced.",
