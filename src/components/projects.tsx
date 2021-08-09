@@ -48,7 +48,7 @@ const projectList: ProjectList = {
     ],
     actions: [
       {
-        name: "play on itch.io",
+        name: "Play on itch.io",
         link: "https://tingalinga.itch.io/out-of-thyme",
       },
     ],
@@ -73,11 +73,11 @@ const projectList: ProjectList = {
     ],
     actions: [
       {
-        name: "visit project site",
+        name: "Visit RocketPad project site",
         link: "https://itshuitingg6.wixsite.com/rocketpad",
       },
       {
-        name: "try out the prototype on figma",
+        name: "Try out the prototype on Figma",
         link: "https://www.figma.com/proto/5Ivl6GvTRRAIUqL1ZwVYO2/CS3240-Final-Prototype",
       },
     ],
@@ -100,7 +100,7 @@ const projectList: ProjectList = {
     ],
     actions: [
       {
-        name: "view captsule ay18/19 edition",
+        name: "View CAPTsule AY18/19 Edition",
         link: captsule_pdf,
       },
     ],
@@ -124,11 +124,11 @@ const projectList: ProjectList = {
     ],
     actions: [
       {
-        name: "view @nus.jazzttitude's instagram",
+        name: "View @nus.jazzttitude's instagram",
         link: "https://www.instagram.com/nus.jazzttitude",
       },
       {
-        name: "watch Jazzttitude Publicity Video 2019",
+        name: "Watch Jazzttitude Publicity Video 2019",
         link: "https://www.youtube.com/watch?v=ZcHNRy7L_n0",
       },
     ],

@@ -13,6 +13,7 @@ import { addNavigationHandler } from "utils/isInViewport";
 class App extends React.Component {
   render() {
     addNavigationHandler();
+    
 
     return (
       <div>

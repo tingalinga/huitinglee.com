@@ -38,6 +38,7 @@ export default class Homepage extends React.Component {
   render(): JSX.Element {
     return (
       <div id="homepage" className={app.page_block}>
+        <div className={app.blank_space} />
         {this.renderInfoButtons()}
         <div className={homepage.introduction}>
           <p>Hey there!</p>

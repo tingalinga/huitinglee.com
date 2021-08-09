@@ -60,11 +60,11 @@ const experienceList: ExperienceList = {
     ],
     actions: [
       {
-        name: "view Datature Nexus product site",
+        name: "View Datature Nexus Product site",
         link: "https://datature.io",
       },
       {
-        name: "view Datature portal site",
+        name: "View Datature Portal site",
         link: "https://datature.io/portal",
       },
     ],
@@ -113,7 +113,7 @@ const experienceList: ExperienceList = {
     ],
     actions: [
       {
-        name: "view product site",
+        name: "View Breaking Barriers Product site",
         link: "https://teamaurorasg.wixsite.com/home",
       },
     ],
