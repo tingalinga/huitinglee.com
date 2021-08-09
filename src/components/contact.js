@@ -147,10 +147,19 @@ const Contact = () => {
 
   return (
     <div id="skills" className={app.page_block}>
-      <h2 className={app.heading_box}>
-        <ZoojaIcon icon="y" sideIcon />
-        Contact me
-      </h2>
+      {width > 768 ? (
+        <h2 className={app.heading_box}>
+          <ZoojaIcon icon="y" sideIcon />
+          Contact me
+        </h2>
+      ) : (
+        <>
+          <h2 className={app.heading_box}>
+            <ZoojaIcon icon="y" sideIcon />
+          </h2>
+          <h2 className={app.heading_box}>Contact me</h2>
+        </>
+      )}
       <div className={contact.form_container}>
         <form id="contact-form" onSubmit={handleSubmit(onSubmit)} noValidate>
           {firstRow}

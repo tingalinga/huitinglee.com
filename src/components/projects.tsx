@@ -1,7 +1,6 @@
-import React from "react";
-
 import ZoojaIcon from "utils/components/zoojaicon";
 import { Logo, LogoProps, logoPresets } from "utils/components/logo";
+import useWindowDimensions from "utils/windowdimensions";
 
 import outofthyme_image from "assets/projects/outofthyme.png";
 import captsule_image from "assets/projects/captsule.png";
@@ -144,8 +143,9 @@ const projectList: ProjectList = {
   },
 };
 
-export default class Projects extends React.Component {
-  renderProjectsDisplay = (project: ProjectProps) => {
+const Projects = () => {
+  const { width } = useWindowDimensions();
+  const renderProjectsDisplay = (project: ProjectProps) => {
     const image =
       project.name !== projectList.rocketpad.name ? (
         <img
@@ -213,17 +213,26 @@ export default class Projects extends React.Component {
     );
   };
 
-  render(): JSX.Element {
-    return (
-      <div id="projects" className={app.page_block}>
+  return (
+    <div id="projects" className={app.page_block}>
+      {width > 768 ? (
         <h2 className={app.heading_box}>
           <ZoojaIcon icon="e" sideIcon />
           Projects
         </h2>
-        {Object.values(projectList).map((project) =>
-          this.renderProjectsDisplay(project)
-        )}
-      </div>
-    );
-  }
-}
+      ) : (
+        <>
+          <h2 className={app.heading_box}>
+            <ZoojaIcon icon="e" sideIcon />
+          </h2>
+          <h2 className={app.heading_box}>Projects</h2>
+        </>
+      )}
+      {Object.values(projectList).map((project) =>
+        renderProjectsDisplay(project)
+      )}
+    </div>
+  );
+};
+
+export default Projects;

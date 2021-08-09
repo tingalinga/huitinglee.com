@@ -1,7 +1,6 @@
-import React from "react";
-
 import ZoojaIcon from "utils/components/zoojaicon";
 import { Logo, LogoProps, logoPresets } from "utils/components/logo";
+import useWindowDimensions from "utils/windowdimensions";
 
 import app from "app.module.css";
 import experience from "./experience.module.css";
@@ -128,8 +127,10 @@ const experienceList: ExperienceList = {
   },
 };
 
-export default class Experience extends React.Component {
-  renderExperienceDisplay = (company: ExperienceProps) => {
+const Experience = () => {
+  const { width } = useWindowDimensions();
+
+  const renderExperienceDisplay = (company: ExperienceProps) => {
     return (
       <div key={company.company} className={experience.container}>
         <p className={experience.title}>
@@ -181,17 +182,26 @@ export default class Experience extends React.Component {
     );
   };
 
-  render(): JSX.Element {
-    return (
-      <div id="skills" className={app.page_block}>
+  return (
+    <div id="skills" className={app.page_block}>
+      {width > 768 ? (
         <h2 className={app.heading_box}>
           <ZoojaIcon icon="G" sideIcon />
           Experience
         </h2>
-        {Object.values(experienceList).map((experience) =>
-          this.renderExperienceDisplay(experience)
-        )}
-      </div>
-    );
-  }
-}
+      ) : (
+        <>
+          <h2 className={app.heading_box}>
+            <ZoojaIcon icon="G" sideIcon />
+          </h2>
+          <h2 className={app.heading_box}>Experience</h2>
+        </>
+      )}
+      {Object.values(experienceList).map((experience) =>
+        renderExperienceDisplay(experience)
+      )}
+    </div>
+  );
+};
+
+export default Experience;
