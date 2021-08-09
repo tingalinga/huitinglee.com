@@ -5,6 +5,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.min.css";
 
 import ZoojaIcon from "utils/components/zoojaicon";
+import useWindowDimensions from "utils/windowdimensions";
 
 import loading_gif from "assets/loading.gif";
 
@@ -57,6 +58,93 @@ const Contact = () => {
     });
   };
 
+  let firstRow = (
+    <>
+      {/* Row 1 of form */}
+      <div className={contact.form_row}>
+        <input
+          className={contact.form_input}
+          type="text"
+          name="name"
+          placeholder="Name"
+          {...register("name", {
+            required: { value: true, message: "Please enter your name" },
+            maxLength: {
+              value: 30,
+              message: "Please use 30 characters or less",
+            },
+          })}
+        />
+        <input
+          className={contact.form_input}
+          type="email"
+          name="email"
+          placeholder="Email address"
+          {...register("email", {
+            required: true,
+            pattern:
+              /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
+          })}
+        />
+      </div>
+      <div className={contact.form_error_row}>
+        <span className={contact.form_error}>
+          {errors.name && errors.name.message}
+        </span>
+        <span className={contact.form_error}>
+          {errors.email && "Please enter a valid email address"}
+        </span>
+      </div>
+    </>
+  );
+
+  const { width } = useWindowDimensions();
+  if (width <= 768) {
+    firstRow = (
+      <>
+        {/* Row 1 of form */}
+        <div className={contact.form_row}>
+          <input
+            className={contact.form_input}
+            type="text"
+            name="name"
+            placeholder="Name"
+            {...register("name", {
+              required: { value: true, message: "Please enter your name" },
+              maxLength: {
+                value: 30,
+                message: "Please use 30 characters or less",
+              },
+            })}
+          />
+        </div>
+        <div className={contact.form_error_row}>
+          <span className={contact.form_error}>
+            {errors.name && errors.name.message}
+          </span>
+        </div>
+        <div className={contact.form_row}>
+          <input
+            className={contact.form_input}
+            type="email"
+            name="email"
+            placeholder="Email address"
+            {...register("email", {
+              required: true,
+              pattern:
+                /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
+            })}
+          />
+        </div>
+        <div className={contact.form_error_row}>
+          <span className={contact.form_error}>
+            {errors.email && "Please enter a valid email address"}
+          </span>
+        </div>
+      </>
+    );
+  }
+
   return (
     <div id="skills" className={app.page_block}>
       <h2 className={app.heading_box}>
@@ -65,41 +153,7 @@ const Contact = () => {
       </h2>
       <div className={contact.form_container}>
         <form id="contact-form" onSubmit={handleSubmit(onSubmit)} noValidate>
-          {/* Row 1 of form */}
-          <div className={contact.form_row}>
-            <input
-              className={contact.form_input}
-              type="text"
-              name="name"
-              placeholder="Name"
-              {...register("name", {
-                required: { value: true, message: "Please enter your name" },
-                maxLength: {
-                  value: 30,
-                  message: "Please use 30 characters or less",
-                },
-              })}
-            />
-            <input
-              className={contact.form_input}
-              type="email"
-              name="email"
-              placeholder="Email address"
-              {...register("email", {
-                required: true,
-                pattern:
-                  /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
-              })}
-            />
-          </div>
-          <div className={contact.form_error_row}>
-            <span className={contact.form_error}>
-              {errors.name && errors.name.message}
-            </span>
-            <span className={contact.form_error}>
-              {errors.email && "Please enter a valid email address"}
-            </span>
-          </div>
+          {firstRow}
           {/* Row 2 of form */}
           <div className={contact.form_row}>
             <input

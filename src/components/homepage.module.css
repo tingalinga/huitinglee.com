@@ -16,3 +16,26 @@
 .introduction {
   margin-top: -50px;
 }
+
+@media only screen and (max-width: 992px) {
+  /* Medium Devices, Desktops */
+
+  .heading_section {
+    display: block;
+  }
+
+  .heading {
+    width: 100%;
+    font-size: 11rem;
+    line-height: 150px;
+  }
+
+  .info {
+    padding-top: 0;
+    padding-left: 0;
+  }
+
+  .introduction {
+    margin-top: 40px;
+  }
+}

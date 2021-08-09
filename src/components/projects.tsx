@@ -149,19 +149,19 @@ export default class Projects extends React.Component {
     const image =
       project.name !== projectList.rocketpad.name ? (
         <img
-          className={experience.projects_image}
+          className={projects.projects_image}
           alt={project.image}
           src={project.image}
         />
       ) : (
-        <video className={experience.projects_image} controls muted>
+        <video className={projects.projects_image} controls muted>
           <source src={project.image} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       );
     return (
       <div key={project.name} className={experience.container}>
-        <div className={experience.projects_subcontainer}>
+        <div className={projects.projects_subcontainer}>
           {image}
           <p className={experience.title}>
             {project.name}

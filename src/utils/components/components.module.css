@@ -160,7 +160,7 @@
 /* Footer {utils/components/footer.tsx} */
 .footer {
   position: relative;
-  height: 60vh;
+  height: 55vh;
   outline: none;
   overflow: visible;
 }
@@ -242,4 +242,72 @@
 .buttons {
   margin-top: 10px;
   margin-left: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+  /* Extra Small Devices, Phones */
+  .links {
+    padding-top: 0;
+    margin-left: 20px;
+  }
+
+  .link {
+    margin: 5px 20px;
+  }
+
+  .footer {
+    height: 60vh !important;
+  }
+
+  .footer_content {
+    display: block;
+    height: unset;
+    width: calc(100% - 100px);
+    margin: 0 50px;
+    bottom: 75px !important;
+  }
+
+  .footer_background {
+    position: absolute;
+    width: 100%;
+    height: 275px;
+    background-color: #4e2122;
+    bottom: 0;
+  }
+
+  .footer_image {
+    bottom: 275px;
+  }
+
+  .buttons {
+    margin-top: 0;
+    margin-left: 0;
+  }
+
+  .footer_credits {
+    margin-top: 30px;
+    direction: ltr;
+  }
+}
+
+@media (max-width: 1200px) {
+  /* Medium Devices, Desktops */
+  .navbar {
+    width: calc(100% - 20vw);
+    padding: 5vh 10vw;
+  }
+
+  .footer {
+    height: 20vh;
+  }
+
+  .footer_content {
+    bottom: 40px;
+  }
+}
+
+@media (max-width: 1500px) {
+  .footer {
+    height: 30vh;
+  }
 }

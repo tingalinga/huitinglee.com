@@ -18,3 +18,11 @@
   color: #666666;
   margin: 25px 0;
 }
+
+@media only screen and (max-width: 768px) {
+  /* Extra Small Devices, Phones */
+
+  .projects_image {
+    box-shadow: 6px 6px 7px #dedad6, -6px -6px 7px #ffffff;
+  }
+}

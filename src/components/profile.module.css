@@ -5,3 +5,12 @@
 .img {
   object-fit: contain;
 }
+
+@media only screen and (max-width: 768px) {
+  /* Extra Small Devices, Phones */
+
+  .content {
+    margin-top: 20px;
+    margin-left: 0;
+  }
+}

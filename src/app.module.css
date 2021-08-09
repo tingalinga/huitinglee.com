@@ -63,8 +63,7 @@ p .zooja_elements {
   background-color: #f7f2ee;
   padding-top: 6vh;
   color: #00171f;
-  min-height: 100vh;
-  overflow: auto;
+  height: 100%;
 }
 
 .first_page_block {
@@ -77,6 +76,7 @@ p .zooja_elements {
 .container {
   display: flex;
   align-items: flex-start;
+  margin-right: -40px;
 }
 
 .container p {
@@ -86,10 +86,33 @@ p .zooja_elements {
 .page_block {
   min-height: 75vh;
   padding: 10vh 16vw;
+  overflow: visible;
   outline: none;
 }
 
 .info_btn {
   margin-right: 5px;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 1200px) {
+  /* Medium Devices, Desktops */
+
+  .page_block {
+    padding: 5vh 10vw;
+    outline: none;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  /* Small Devices, Tablets */
+}
+
+@media only screen and (max-width: 768px) {
+  /* Extra Small Devices, Phones */
+
+  .container {
+    display: block;
+    margin-right: 0;
+  }
 }
