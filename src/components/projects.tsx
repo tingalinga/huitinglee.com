@@ -42,7 +42,7 @@ const projectList: ProjectList = {
     ],
     contributions: [
       "Coded and developed a platform game using GameMaker Studio 2.",
-      "Designed and arranged levels on Miro, as well as recruited playtesters for quality assurance testing.",
+      "Designed and arranged levels on Miro, as well as recruited play testers for quality assurance testing.",
       "Sourced for royalty free art and drew sprites for the game art.",
     ],
     actions: [
@@ -88,10 +88,10 @@ const projectList: ProjectList = {
   captsule: {
     name: "CAPTsule",
     image: captsule_image,
-    period: "Aug 20 - Dec 20",
+    period: "Aug 18 - May 19",
     role: "Designer",
     description: [
-      "CAPTsule is a annual yearbook publication distributed in College of Alice and Peter Tan (CAPT)." +
+      "CAPTsule is a annual yearbook publication distributed in College of Alice and Peter Tan (CAPT). " +
         "It encapsulates the respective academic year in CAPT and showcases the residents and events they have experienced.",
     ],
     contributions: [
