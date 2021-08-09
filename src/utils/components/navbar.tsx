@@ -12,7 +12,10 @@ class NavBar extends React.Component {
       <div id="navbar" className={components.navbar}>
         <div id="first_page_block" className={app.first_page_block} />
         <Link to="/">
-          <img src={totoro} alt="totoro" />
+          <img src={totoro} alt="homepage button" />
+          {window.location.hash && (
+            <span className={components.homelink}>huiting lee</span>
+          )}
         </Link>
         <div className={components.links}>
           <Link className={components.link} to="/about">

@@ -151,13 +151,8 @@ export default class Experience extends React.Component {
         </ul>
         {company.actions?.length &&
           company.actions.map((action) => (
-            <div className={experience.action}>
-              <a
-                key={action.name}
-                href={action.link}
-                target="_blank"
-                rel="noreferrer"
-              >
+            <div key={action.name} className={experience.action}>
+              <a href={action.link} target="_blank" rel="noreferrer">
                 <img
                   alt="link icon"
                   src="https://img.icons8.com/material-outlined/50/666666/link--v1.png"
