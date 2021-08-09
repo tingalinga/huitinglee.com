@@ -1,6 +1,5 @@
 import React from "react";
 
-import ZoojaIcon from "utils/components/zoojaicon";
 import totoro_footer from "assets/totoro_footer.png";
 
 import app from "app.module.css";
@@ -47,12 +46,15 @@ export default class Footer extends React.Component {
               />
             </div>
           </div>
-          {/* <div className={components.footer_content_center}>
+          {/* 
+          Removed temporarily for now
+          <div className={components.footer_content_center}>
             <div className={components.footer_zoojaicon}>
               <ZoojaIcon icon="c" />
             </div>
             <span className={components.footer_text}>Have a great day!</span>
-          </div> */}
+          </div> 
+          */}
           <div className={components.footer_content_right}>
             <div className={components.footer_credits}>
               Icons by{" "}
