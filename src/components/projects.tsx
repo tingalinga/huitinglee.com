@@ -146,14 +146,23 @@ const projectList: ProjectList = {
 
 export default class Projects extends React.Component {
   renderProjectsDisplay = (project: ProjectProps) => {
+    const image =
+      project.name !== projectList.rocketpad.name ? (
+        <img
+          className={experience.projects_image}
+          alt={project.image}
+          src={project.image}
+        />
+      ) : (
+        <video className={experience.projects_image} controls muted>
+          <source src={project.image} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      );
     return (
       <div key={project.name} className={experience.container}>
         <div className={experience.projects_subcontainer}>
-          <img
-            className={experience.projects_image}
-            alt={project.image}
-            src={project.image}
-          />
+          {image}
           <p className={experience.title}>
             {project.name}
             <span className={experience.subheading}> | {project.period}</span>
@@ -174,16 +183,20 @@ export default class Projects extends React.Component {
           </ul>
           {project.actions?.length &&
             project.actions.map((action) => (
-              <p key={action.name} className={experience.actions}>
+              <div className={experience.action}>
                 <a
-                  className={experience.subheading}
+                  key={action.name}
                   href={action.link}
                   target="_blank"
                   rel="noreferrer"
                 >
-                  {`< ${action.name} />`}
+                  <img
+                    alt="link icon"
+                    src="https://img.icons8.com/material-outlined/50/666666/link--v1.png"
+                  />
+                  {action.name}
                 </a>
-              </p>
+              </div>
             ))}
           <div className={experience.skills}>
             {Object.entries(project.skills).map((skill) => {

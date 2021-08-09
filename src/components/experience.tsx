@@ -136,14 +136,11 @@ export default class Experience extends React.Component {
           {company.role}
           <span className={experience.subheading}> | {company.period}</span>
         </p>
-        <a
-          className={experience.subheading}
-          href={company.site}
-          target="_blank"
-          rel="noreferrer"
-        >
-          {company.company}
-        </a>
+        <div className={experience.action}>
+          <a href={company.site} target="_blank" rel="noreferrer">
+            {company.company}
+          </a>
+        </div>
         <p className={experience.additional_notes}>
           {company.additional_notes}
         </p>
@@ -154,16 +151,20 @@ export default class Experience extends React.Component {
         </ul>
         {company.actions?.length &&
           company.actions.map((action) => (
-            <p key={action.name} className={experience.actions}>
+            <div className={experience.action}>
               <a
-                className={experience.subheading}
+                key={action.name}
                 href={action.link}
                 target="_blank"
                 rel="noreferrer"
               >
-                {`< ${action.name} />`}
+                <img
+                  alt="link icon"
+                  src="https://img.icons8.com/material-outlined/50/666666/link--v1.png"
+                />
+                {action.name}
               </a>
-            </p>
+            </div>
           ))}
 
         <div className={experience.skills}>

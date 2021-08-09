@@ -14,13 +14,13 @@ export default class Homepage extends React.Component {
         <img
           alt="github"
           className={homepage.info_button}
-          src="https://img.icons8.com/ios-glyphs/30/9d4345/github.png"
+          src="https://img.icons8.com/ios-glyphs/40/9d4345/github.png"
           onClick={() => this.openLink("https://github.com/tingalinga")}
         />
         <img
           alt="linkedin"
           className={homepage.info_button}
-          src="https://img.icons8.com/ios-glyphs/30/9d4345/linkedin-circled--v1.png"
+          src="https://img.icons8.com/ios-glyphs/40/9d4345/linkedin-circled--v1.png"
           onClick={() =>
             this.openLink("https://www.linkedin.com/in/huiting-lee-6a2b061a1/")
           }
@@ -28,7 +28,7 @@ export default class Homepage extends React.Component {
         <img
           alt="email"
           className={homepage.info_button}
-          src="https://img.icons8.com/ios-glyphs/30/9d4345/email-sign.png"
+          src="https://img.icons8.com/ios-glyphs/40/9d4345/email-sign.png"
           onClick={() => this.openEmail("mailto:huiting.lee@u.nus.edu")}
         />
       </div>
