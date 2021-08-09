@@ -88,3 +88,8 @@ p .zooja_elements {
   padding: 10vh 16vw;
   outline: none;
 }
+
+.info_btn {
+  margin-right: 5px;
+  cursor: pointer;
+}

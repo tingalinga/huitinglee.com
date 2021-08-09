@@ -9,10 +9,14 @@ import Contact from "components/contact";
 
 import NavBar from "utils/components/navbar";
 import UpButton from "utils/components/upbutton";
+import Footer from "utils/components/footer";
 
 import app from "app.module.css";
 
 export default class MasterPage extends React.Component {
+  openLink = (url: string): void => window.open(url, "_blank")?.focus();
+  openEmail = (url: string): void => window.open(url, "_self")?.focus();
+
   render(): JSX.Element {
     return (
       <>
@@ -25,6 +29,7 @@ export default class MasterPage extends React.Component {
           <Experience />
           <Projects />
           <Contact />
+          <Footer />
         </div>
       </>
     );

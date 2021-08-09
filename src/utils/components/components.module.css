@@ -18,8 +18,6 @@
   text-decoration: none;
   margin-left: 10px;
   vertical-align: text-bottom;
-  /* margin-block-start: 0.33em;
-  margin-block-end: 0.33em; */
   font-family: "zooja-pro";
   color: #9d4345;
 }
@@ -157,4 +155,91 @@
 .sidenav {
   position: fixed;
   padding: 50% 0;
+}
+
+/* Footer {utils/components/footer.tsx} */
+.footer {
+  position: relative;
+  height: 60vh;
+  outline: none;
+  overflow: visible;
+}
+
+.footer_image {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  object-fit: cover;
+}
+
+.footer_content {
+  position: absolute;
+  display: flex;
+  height: 60px;
+  width: calc(100% - 200px);
+  z-index: 100;
+  margin: 0 100px;
+  bottom: 70px;
+}
+
+.footer_content_left {
+  flex: 1;
+  display: flex;
+}
+
+.footer_content_center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  padding-top: 15px;
+}
+
+.footer_content_right {
+  flex: 1;
+}
+
+.footer_heading {
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 400;
+  font-family: "zooja-pro";
+}
+
+.footer_zoojaicon {
+  display: inline;
+  margin-top: -15px;
+  margin-right: 10px;
+}
+
+.footer_zoojaicon span {
+  color: #fff;
+  font-size: 4rem;
+  font-weight: 500;
+}
+
+.footer_text {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.footer_credits {
+  width: 100%;
+  margin-bottom: 10px;
+
+  direction: rtl;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.footer_credits a {
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.buttons {
+  margin-top: 10px;
+  margin-left: 20px;
 }
