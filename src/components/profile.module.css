@@ -14,3 +14,11 @@
     margin-left: 0;
   }
 }
+
+@media only screen and (max-width: 320px) {
+  /* Extra Small Devices, Phones */
+
+  .img {
+    width: 100%;
+  }
+}

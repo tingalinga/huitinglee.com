@@ -16,6 +16,7 @@ const Footer = () => {
         alt="footer"
         src={totoro_footer}
       />
+      <div className={components.footer_background} />
       <div className={components.footer_content}>
         <div className={components.footer_content_left}>
           <span className={components.footer_heading}>huiting lee</span>

@@ -104,6 +104,12 @@ p .zooja_elements {
   }
 }
 
+@media only screen and (max-width: 992px) {
+  .page {
+    padding-top: 10vh;
+  }
+}
+
 @media only screen and (max-width: 768px) {
   /* Extra Small Devices, Phones */
 
@@ -114,5 +120,9 @@ p .zooja_elements {
 
   h2 {
     line-height: 70px;
+  }
+
+  .page {
+    padding-top: 20vh;
   }
 }
