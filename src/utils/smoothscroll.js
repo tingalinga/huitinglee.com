@@ -25,7 +25,7 @@ export function scroll(element) {
   function showAnimation(timestamp) {
     if (!start) {
       start = timestamp || new Date().getTime();
-    } //get id of animation
+    } // get id of animation
 
     let elapsed = timestamp - start;
     let progress = elapsed / 600; // animation duration 600ms
@@ -45,7 +45,6 @@ export function scroll(element) {
         : firstPos + target * easeInPercentage;
 
     window.scrollTo(0, pos);
-    console.log(pos, target, firstPos, progress);
 
     if (
       (target !== 0 && pos >= firstPos + target) ||
