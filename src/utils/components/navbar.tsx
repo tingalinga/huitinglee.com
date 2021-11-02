@@ -9,7 +9,7 @@ import components from "./components.module.css";
 const NavBar = () => {
   const { width } = useWindowDimensions();
   return (
-    <div id="navbar" className={components.navbar}>
+    <header id="navbar" className={components.navbar}>
       <div id="first_page_block" className={app.first_page_block} />
       <Link to="/" replace>
         <img src={totoro} alt="homepage button" />
@@ -31,7 +31,7 @@ const NavBar = () => {
           Contact
         </Link>
       </div>
-    </div>
+    </header>
   );
 };
 

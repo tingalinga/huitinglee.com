@@ -60,7 +60,7 @@ const Footer = () => {
             </a>
           </div>
           <div className={components.footer_credits}>
-            Ⓒ 2021 All artwork by Huiting Lee
+            Ⓒ 2021 Designed and built by Huiting Lee
           </div>
         </div>
       </div>
@@ -106,7 +106,7 @@ const Footer = () => {
           <a href="https://icons8.com" target="_blank" rel="noreferrer">
             Icons8
           </a>
-          <br />Ⓒ 2021 All artwork by Huiting Lee
+          <br />Ⓒ 2021 Designed and built by Huiting Lee
         </div>
       </div>
     </>

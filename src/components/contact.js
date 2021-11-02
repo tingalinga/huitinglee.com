@@ -190,7 +190,6 @@ const Contact = () => {
           <div className={contact.form_row}>
             <textarea
               className={contact.form_input}
-              rows={3}
               name="message"
               placeholder="Message"
               {...register("message", { required: true })}

@@ -1,7 +1,12 @@
 /* Navigation Bar {utils/components/navbar.tsx} */
+header {
+  background: #f7f2ee;
+}
+
+
 .navbar {
   position: absolute;
-  background: transparent;
+  background: #f7f2ee;
   display: flex;
   width: calc(100% - 32vw);
   padding: 5vh 16vw;
