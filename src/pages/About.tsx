@@ -1,3 +1,4 @@
+
 import React from "react";
 
 import Profile from "components/profile";
@@ -8,7 +9,7 @@ import Footer from "utils/components/footer";
 
 import app from "app.module.css";
 
-class About extends React.Component {
+class about extends React.Component {
   render() {
     return (
       <>
@@ -24,4 +25,4 @@ class About extends React.Component {
   }
 }
 
-export default About;
+export default about;

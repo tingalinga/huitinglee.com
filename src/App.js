@@ -1,13 +1,13 @@
-import React from "react";
-import { HashRouter, Route, Switch } from "react-router-dom";
+import React from 'react';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 
-import MasterPage from "pages/masterpage";
-import About from "pages/about";
-import Experience from "pages/experience";
-import Projects from "pages/projects";
-import Contact from "pages/contact";
+import MasterPage from 'pages/masterpage';
+import About from 'pages/about';
+import Experience from 'pages/experience';
+import Projects from 'pages/projects';
+import Contact from 'pages/contact';
 
-import { addNavigationHandler } from "utils/isInViewport";
+import { addNavigationHandler } from 'utils/isInViewport';
 
 class App extends React.Component {
   render() {
@@ -16,13 +16,13 @@ class App extends React.Component {
     return (
       <div>
         <HashRouter hashType="noslash">
-          <Switch>
-            <Route path="/about" component={About} />
-            <Route path="/experience" component={Experience} />
-            <Route path="/projects" component={Projects} />
-            <Route path="/contact" component={Contact} />
-            <Route component={MasterPage} />
-          </Switch>
+          <Routes>
+            <Route path="/about" element={<About />} />
+            <Route path="/experience" element={<Experience />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/" element={<MasterPage />} />
+          </Routes>
         </HashRouter>
       </div>
     );

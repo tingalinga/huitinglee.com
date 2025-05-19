@@ -1,16 +1,16 @@
-import { useState } from "react";
-import { useForm } from "react-hook-form";
-import emailjs from "emailjs-com";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.min.css";
+import { useState } from 'react';
+import { useForm } from 'react-hook-form';
+import emailjs from 'emailjs-com';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/ReactToastify.css';
 
-import ZoojaIcon from "utils/components/zoojaicon";
-import useWindowDimensions from "utils/windowdimensions";
+import ZoojaIcon from 'utils/components/zoojaicon';
+import useWindowDimensions from 'utils/windowdimensions';
 
-import loading_gif from "assets/loading.gif";
+import loading_gif from 'assets/loading.gif';
 
-import app from "app.module.css";
-import contact from "./contact.module.css";
+import app from 'app.module.css';
+import contact from './contact.module.css';
 
 const Contact = () => {
   const {
@@ -22,7 +22,7 @@ const Contact = () => {
 
   const [loading, setLoading] = useState(false);
 
-  const onSubmit = async (data) => {
+  const onSubmit = async data => {
     setLoading(true);
     try {
       const templateParams = {
@@ -46,15 +46,15 @@ const Contact = () => {
   };
 
   const toastifySuccess = () => {
-    toast("Message sent!", {
-      position: "bottom-left",
+    toast('Message sent!', {
+      position: 'bottom-left',
       autoClose: 5000,
       hideProgressBar: true,
       closeOnClick: true,
       pauseOnHover: true,
       draggable: false,
       className: contact.toast_success,
-      toastId: "notifyToast",
+      toastId: 'notifyToast',
     });
   };
 
@@ -67,11 +67,11 @@ const Contact = () => {
           type="text"
           name="name"
           placeholder="Name"
-          {...register("name", {
-            required: { value: true, message: "Please enter your name" },
+          {...register('name', {
+            required: { value: true, message: 'Please enter your name' },
             maxLength: {
               value: 30,
-              message: "Please use 30 characters or less",
+              message: 'Please use 30 characters or less',
             },
           })}
         />
@@ -80,20 +80,15 @@ const Contact = () => {
           type="email"
           name="email"
           placeholder="Email address"
-          {...register("email", {
+          {...register('email', {
             required: true,
-            pattern:
-              /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
+            pattern: /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
           })}
         />
       </div>
       <div className={contact.form_error_row}>
-        <span className={contact.form_error}>
-          {errors.name && errors.name.message}
-        </span>
-        <span className={contact.form_error}>
-          {errors.email && "Please enter a valid email address"}
-        </span>
+        <span className={contact.form_error}>{errors.name && errors.name.message}</span>
+        <span className={contact.form_error}>{errors.email && 'Please enter a valid email address'}</span>
       </div>
     </>
   );
@@ -109,19 +104,17 @@ const Contact = () => {
             type="text"
             name="name"
             placeholder="Name"
-            {...register("name", {
-              required: { value: true, message: "Please enter your name" },
+            {...register('name', {
+              required: { value: true, message: 'Please enter your name' },
               maxLength: {
                 value: 30,
-                message: "Please use 30 characters or less",
+                message: 'Please use 30 characters or less',
               },
             })}
           />
         </div>
         <div className={contact.form_error_row}>
-          <span className={contact.form_error}>
-            {errors.name && errors.name.message}
-          </span>
+          <span className={contact.form_error}>{errors.name && errors.name.message}</span>
         </div>
         <div className={contact.form_row}>
           <input
@@ -129,17 +122,14 @@ const Contact = () => {
             type="email"
             name="email"
             placeholder="Email address"
-            {...register("email", {
+            {...register('email', {
               required: true,
-              pattern:
-                /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
+              pattern: /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
             })}
           />
         </div>
         <div className={contact.form_error_row}>
-          <span className={contact.form_error}>
-            {errors.email && "Please enter a valid email address"}
-          </span>
+          <span className={contact.form_error}>{errors.email && 'Please enter a valid email address'}</span>
         </div>
       </>
     );
@@ -170,21 +160,17 @@ const Contact = () => {
               type="text"
               name="subject"
               placeholder="Subject"
-              {...register("subject", {
-                required: { value: true, message: "Please enter a subject" },
+              {...register('subject', {
+                required: { value: true, message: 'Please enter a subject' },
                 maxLength: {
                   value: 75,
-                  message: "Subject cannot exceed 75 characters",
+                  message: 'Subject cannot exceed 75 characters',
                 },
               })}
             />
           </div>
           <div className={contact.form_error_row}>
-            {errors.subject && (
-              <span className={contact.form_error}>
-                {errors.subject.message}
-              </span>
-            )}
+            {errors.subject && <span className={contact.form_error}>{errors.subject.message}</span>}
           </div>
           {/* Row 3 of form */}
           <div className={contact.form_row}>
@@ -192,24 +178,18 @@ const Contact = () => {
               className={contact.form_input}
               name="message"
               placeholder="Message"
-              {...register("message", { required: true })}
+              {...register('message', { required: true })}
             />
           </div>
           <div className={contact.form_error_row}>
-            {errors.message && (
-              <span className={contact.form_error}>Please enter a message</span>
-            )}
+            {errors.message && <span className={contact.form_error}>Please enter a message</span>}
           </div>
           <div className={contact.form_button_row}>
             <button className={contact.submit_btn} type="submit">
               {loading ? (
-                <img
-                  className={contact.submit_btn_loading}
-                  alt="loading button"
-                  src={loading_gif}
-                />
+                <img className={contact.submit_btn_loading} alt="loading button" src={loading_gif} />
               ) : (
-                "Submit"
+                'Submit'
               )}
             </button>
           </div>
