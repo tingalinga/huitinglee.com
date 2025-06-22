@@ -1,10 +1,10 @@
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
-import useWindowDimensions from "utils/windowdimensions";
-import totoro from "assets/totoro.png";
+import useWindowDimensions from 'utils/windowdimensions';
+import totoro from 'assets/totoro.png';
 
-import app from "app.module.css";
-import components from "./components.module.css";
+import app from 'app.module.css';
+import components from './components.module.css';
 
 const NavBar = () => {
   const { width } = useWindowDimensions();
@@ -13,9 +13,7 @@ const NavBar = () => {
       <div id="first_page_block" className={app.first_page_block} />
       <Link to="/" replace>
         <img src={totoro} alt="homepage button" />
-        {window.location.hash && width > 992 && (
-          <span className={components.homelink}>huiting lee</span>
-        )}
+        {window.location.hash && width > 992 && <span className={components.homelink}>huiting lee</span>}
       </Link>
       <div className={components.links}>
         <Link className={components.link} to="/about" replace>
